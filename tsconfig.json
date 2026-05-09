@@ -9,7 +9,6 @@
     "moduleDetection": "force",
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
-
     /* Strictness */
     "strict": true,
     "noUncheckedIndexedAccess": true,
@@ -26,6 +25,7 @@
 
     /* Path Aliases */
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
       "@/*": ["./src/*"]
     }
