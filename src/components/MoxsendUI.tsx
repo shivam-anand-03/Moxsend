@@ -4,7 +4,6 @@ import React, { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Send,
-  Sparkles,
   History,
   Layout,
   Upload,
@@ -13,10 +12,9 @@ import {
   ArrowRight,
   RefreshCcw,
   Copy,
-  ChevronRight,
-  Mail,
   FileText,
   Users,
+  StarHalfIcon,
 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -166,9 +164,6 @@ export default function MoxsendUI() {
       <div className="mx-auto max-w-5xl space-y-10">
         {/* Header */}
         <header className="flex flex-col items-center space-y-4 text-center">
-          <div className="inline-flex items-center justify-center rounded-xl bg-indigo-600 p-2 shadow-lg shadow-indigo-200">
-            <Sparkles className="h-8 w-8 text-white" />
-          </div>
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
             Moxsend <span className="text-indigo-600">UI</span>
           </h1>
@@ -310,7 +305,6 @@ export default function MoxsendUI() {
                             className="w-full border-indigo-100 font-medium text-indigo-600 hover:bg-indigo-50 hover:text-indigo-700"
                             onClick={() => handleImprove(idx)}
                           >
-                            <Sparkles className="mr-2 h-4 w-4" />
                             Improve this email
                           </Button>
                         </CardFooter>
@@ -483,7 +477,7 @@ export default function MoxsendUI() {
               transition={{ duration: 2, repeat: Infinity }}
               className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-600 shadow-xl"
             >
-              <Sparkles className="h-8 w-8 text-white" />
+              <StarHalfIcon className="h-8 w-8 text-white" />
             </motion.div>
             <h3 className="text-xl font-bold text-slate-900">
               Moxsend AI is thinking...
